@@ -5,7 +5,29 @@
 **Repository:** https://github.com/Tejas6499/PES1UG24CS108-pes-vcs
 
 ## Screenshots
-*(Screenshots added separately)*
+![1A](screenshots/1A.jpeg)
+
+![1B](screenshots/1B.jpeg)
+
+![2A](screenshots/2A.jpeg)
+
+![2B](screenshots/2B.jpeg)
+
+![3A](screenshots/3A.jpeg)
+
+![3B](screenshots/3B.jpeg)
+
+![4A](screenshots/4A.jpeg)
+
+![4B](screenshots/4B.jpeg)
+
+![4C](screenshots/4C.jpeg)
+
+![INT](screenshots/INT.jpeg)
+
+![INT2](screenshots/INT2.jpeg)
+
+![INT3](screenshots/INT3.jpeg)
 
 ## Phase 5 - Branching and Checkout
 
