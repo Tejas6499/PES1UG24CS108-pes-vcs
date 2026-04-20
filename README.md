@@ -45,5 +45,8 @@ In detached HEAD, commits are written to the object store but HEAD contains a ra
 ### Q6.1
 Use mark-and-sweep. Mark phase: seed a reachable set with all tip SHAs from .pes/refs/ and HEAD, then BFS through each commit following tree and parent pointers, adding every SHA to a hash set. Sweep phase: enumerate every file under .pes/objects/, reconstruct its SHA from the path, and delete it if absent from the reachable set. Use a hash table for O(1) membership tests. For 100000 commits with 50 branches expect roughly 3 million objects to visit across both phases.
 
+---
+
 ### Q6.2
+
 Race condition: GC mark phase runs and finds a new blob unreachable because the commit referencing it has not been written yet. GC sweep deletes the blob. The commit then writes successfully but its blob is gone and the repo is corrupt. Git avoids this with a grace period: any object file newer than 2 weeks is never deleted even if unreachable. This window covers any in-progress commit. PES-VCS can adopt the same fix by calling stat() on each candidate deletion and skipping files with mtime within the last 60 seconds.
